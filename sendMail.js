@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
                 console.log(error)
                 res.status(400).json({
                     status: 400,
-                    message: "Email and app password not matched"
+                    message: error.response
                 })
             } else {
                 res.status(200).json({
